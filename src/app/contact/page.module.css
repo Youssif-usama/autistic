@@ -1,0 +1,447 @@
+.main {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.contactHero {
+  height: 50vh;
+  background: linear-gradient(rgba(0, 84, 165, 0.8), rgba(0, 84, 165, 0.8)),
+              url('/images/contact-hero-bg.jpeg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F2F3F8;
+  position: relative;
+  margin-top: 80px;
+}
+
+.contactHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/pattern.png');
+  opacity: 0.1;
+}
+
+.contactHeroContent {
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contactHeroContent h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contactHeroContent p {
+  font-size: 1.5rem;
+  animation: fadeInUp 1s ease 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Information Section */
+.contactInfo {
+  padding: 5rem 2rem;
+  background-color: #F2F3F8;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactInfo::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 84, 165, 0.05) 0%, rgba(244, 121, 69, 0.05) 100%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contactInfoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contactInfoCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactInfoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+}
+
+.contactInfoCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(0, 84, 165, 0.1), rgba(244, 121, 69, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.iconWrapper i {
+  font-size: 1.8rem;
+  color: rgb(0 84 165);
+  position: relative;
+  z-index: 1;
+}
+
+.iconWrapper::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 84, 165, 0.2), rgba(244, 121, 69, 0.2));
+  z-index: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.contactInfoCard h3 {
+  color: rgb(0 84 165);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.contactInfoCard h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  border-radius: 2px;
+}
+
+.contactInfoCard p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Form Section */
+.contactFormSection {
+  padding: 5rem 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.contactFormContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.formHeader h2 {
+  color: rgb(0 84 165);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.formHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  border-radius: 2px;
+}
+
+.formHeader p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactForm {
+  background-color: #F2F3F8;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contactForm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgb(0 84 165);
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgb(0 84 165);
+  box-shadow: 0 0 0 3px rgba(0, 84, 165, 0.2);
+}
+
+.submitButton {
+  background: linear-gradient(135deg, rgb(0 84 165), rgb(244 121 69));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitButton:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.successMessage,
+.errorMessage {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.successMessage {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+.errorMessage {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.successMessage i,
+.errorMessage i {
+  font-size: 1.2rem;
+}
+
+/* Map Section */
+.mapSection {
+  padding: 5rem 2rem;
+  background-color: #F2F3F8;
+  position: relative;
+}
+
+.mapContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mapContainer h2 {
+  color: rgb(0 84 165);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.mapContainer h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  border-radius: 2px;
+}
+
+.map {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactHeroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .contactHeroContent p {
+    font-size: 1.2rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: 2rem;
+  }
+
+  .formHeader h2,
+  .mapContainer h2 {
+    font-size: 2rem;
+  }
+} 

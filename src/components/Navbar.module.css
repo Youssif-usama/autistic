@@ -1,0 +1,338 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.navbarContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1002;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002;
+  transition: all 0.3s ease;
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+.menuIcon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: rgb(0 84 165);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: rgb(0 84 165);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menuIcon::before {
+  top: -8px;
+  left: 0;
+}
+
+.menuIcon::after {
+  bottom: -8px;
+  left: 0;
+}
+
+.menuIcon.open {
+  background-color: transparent;
+  transform: rotate(180deg);
+}
+
+.menuIcon.open::before {
+  top: 0;
+  transform: rotate(45deg);
+  background-color: rgb(244 121 69);
+}
+
+.menuIcon.open::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+  background-color: rgb(244 121 69);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: rgb(0 84 165);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 84, 165, 0.1), rgba(244, 121, 69, 0.1));
+  border-radius: 50px;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: -1;
+}
+
+.navLink:hover::before {
+  transform: scale(1);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, rgb(0 84 165), rgb(244 121 69));
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: rgb(244 121 69);
+  transform: translateY(-2px);
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+.installButton {
+  background: linear-gradient(135deg, rgb(0 84 165), rgb(244 121 69));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 84, 165, 0.2);
+  margin-left: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.installButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.installButton:hover::before {
+  left: 100%;
+}
+
+.installButton i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.installButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 84, 165, 0.3);
+  color: white;
+}
+
+.installButton:hover i {
+  transform: translateY(-2px);
+}
+
+.installButton::after {
+  display: none;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 1.5rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .installButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    margin-left: 1rem;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .navbarContent {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 2rem;
+    gap: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .navLinks.active {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .navLinks.active .navLink {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navLinks.active .navLink:nth-child(1) { transition-delay: 0.1s; }
+  .navLinks.active .navLink:nth-child(2) { transition-delay: 0.2s; }
+  .navLinks.active .navLink:nth-child(3) { transition-delay: 0.3s; }
+  .navLinks.active .navLink:nth-child(4) { transition-delay: 0.4s; }
+  .navLinks.active .navLink:nth-child(5) { transition-delay: 0.5s; }
+
+  .installButton {
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+  .navbarContent {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .navLink {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+
+  .installButton {
+    max-width: 220px;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+} 
