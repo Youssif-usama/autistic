@@ -1,0 +1,109 @@
+.main {
+    margin-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.termsContainer {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.termsContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.termsContent h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.effectiveDate {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.introduction {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.termsSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.termsSection:last-child {
+  border-bottom: none;
+}
+
+.termsSection h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.termsSection p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.termsSection ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.termsSection ul li {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.termsSection ul li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+.contactEmail {
+  font-size: 1.1rem;
+  color: #3498db;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .termsContainer {
+    padding: 1rem;
+  }
+
+  .termsContent {
+    padding: 1.5rem;
+  }
+
+  .termsContent h1 {
+    font-size: 2rem;
+  }
+
+  .termsSection h2 {
+    font-size: 1.3rem;
+  }
+} 

@@ -23,22 +23,6 @@ export default function Centers() {
       location: 'Cairo, Egypt',
       services: ['Early Diagnosis', 'Behavioral Therapy', 'Parent Training', 'Speech Therapy']
     },
-    {
-      id: 2,
-      title: 'Education & Training Center',
-      description: 'This state-of-the-art facility offers comprehensive educational programs tailored to individual learning needs and styles, helping children with autism develop academic and social skills in a supportive environment.',
-      image: '/images/center-1.png',
-      location: 'Alexandria, Egypt',
-      services: ['Academic Support', 'Social Skills Training', 'Occupational Therapy', 'Sensory Integration']
-    },
-    {
-      id: 3,
-      title: 'Therapy & Support Center',
-      description: 'Our specialized therapy center brings together a team of experienced professionals who provide a range of therapeutic services designed to address the unique challenges faced by individuals with autism.',
-      image: '/images/center-1.png',
-      location: 'Giza, Egypt',
-      services: ['Speech Therapy', 'Occupational Therapy', 'Behavioral Therapy', 'Group Sessions']
-    },
   ];
 
   // Only render the full content when on the client side

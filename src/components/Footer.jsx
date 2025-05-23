@@ -18,6 +18,7 @@ const Footer = () => {
             <li><Link href="/app">Autismaina</Link></li>
             <li><Link href="/centers">Centers</Link></li>
             <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/terms">Terms of Use</Link></li>
           </ul>
         </div>
         <div className={styles.footerSection}>

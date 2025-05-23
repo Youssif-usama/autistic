@@ -47,6 +47,9 @@ const Navbar = () => {
           <Link href="/contact" className={styles.navLink}>
             Contact
           </Link>
+          <Link href="/terms" className={styles.navLink}>
+            Terms
+          </Link>
           <Link href="/app" className={styles.installButton}>
             <i className="fas fa-download"></i> Install App
           </Link>

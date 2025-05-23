@@ -77,15 +77,9 @@ export default function About() {
                 </div>
                 <h2>Our Mission</h2>
                 <p>
-                  To provide comprehensive support and care for individuals with autism and their families, ensuring they have access to the resources and opportunities they need to thrive.
+                Established in early 1999, the Egyptian Autistic Society is a non-profit organization licensed by the Ministry of Social Affairs under license number 4625. Its primary mission is to support individuals with autism and their families, while also increasing awareness and understanding of autism in Egypt.
                 </p>
-                <ul className={styles.missionList}>
-                  <li>Provide specialized education and therapy services</li>
-                  <li>Support families through guidance and resources</li>
-                  <li>Advocate for autism awareness and acceptance</li>
-                  <li>Create inclusive communities and opportunities</li>
-                  <li>Promote research and best practices in autism care</li>
-                </ul>
+
               </div>
             )}
             {activeTab === 'vision' && (
@@ -97,13 +91,6 @@ export default function About() {
                 <p>
                   To create a world where individuals with autism are fully accepted, supported, and empowered to reach their full potential, contributing meaningfully to society.
                 </p>
-                <ul className={styles.visionList}>
-                  <li>Build a network of comprehensive support centers</li>
-                  <li>Develop innovative programs and services</li>
-                  <li>Foster partnerships with educational institutions</li>
-                  <li>Create sustainable funding models</li>
-                  <li>Expand our reach to serve more communities</li>
-                </ul>
               </div>
             )}
           </div>
