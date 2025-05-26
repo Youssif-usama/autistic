@@ -391,4 +391,257 @@
   .impactCard {
     padding: 1.5rem;
   }
+}
+
+/* Partners Section Styles */
+.partners {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.partnersContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.partnersContent h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgb(0 84 165);
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.partnersContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: rgb(244 121 69);
+  border-radius: 2px;
+}
+
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.partnerCard {
+  position: relative;
+  background: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  aspect-ratio: 16/9;
+  min-height: 250px;
+}
+
+.partnerCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.partnerLogo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.partnerLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.9);
+}
+
+.partnerCard:hover .partnerLogo img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.partnerDetails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 84, 165, 0.95) 0%,
+    rgba(244, 121, 69, 0.95) 100%
+  );
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.partnerDetails::-webkit-scrollbar {
+  width: 6px;
+}
+
+.partnerDetails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.partnerDetails::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.partnerCard:hover .partnerDetails {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.partnerDetails h3 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  padding-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.partnerDetails h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.partnerDetails p {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.partnerLink {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.partnerLink:hover {
+  background: white;
+  color: rgb(0, 84, 165);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .partnersGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 3rem 0.5rem;
+  }
+
+  .partnersContent h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .partnersGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .partnerCard {
+    min-height: 220px;
+  }
+
+  .partnerDetails {
+    padding: 1.25rem;
+  }
+
+  .partnerDetails h3 {
+    font-size: 1.8rem;
+  }
+
+  .partnerDetails p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .partnerLink {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partnersGrid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .partnerCard {
+    min-height: 300px;
+    aspect-ratio: auto;
+  }
+
+  .partnerLogo {
+    padding: 2rem;
+    height: 200px;
+  }
+
+  .partnerDetails {
+    padding: 1.5rem;
+  }
+
+  .partnerDetails h3 {
+    font-size: 1.8rem;
+  }
+
+  .partnerDetails p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 } 
