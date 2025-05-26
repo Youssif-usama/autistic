@@ -48,7 +48,6 @@ Manfoods- McDonald’s Egypt is pleased to collaborate with Egyptian Autistic So
 One of the most notable milestones of this partnership is the in-store training program, a pioneering effort designed to offer individuals with autism hands-on experience in a real-world environment. The program equips participants with the skills and confidence needed to transition into the workforce, fostering both independence and personal growth. Over 200 trainees have benefited so far, highlighting our commitment to creating a lasting impact that promotes diversity and inclusion in the workplace.
 This collaboration is a testament to the impact of long-term partnerships grounded in shared values. Together, EAS and McDonald’s Egypt continue to drive awareness, champion inclusion, and create tangible opportunities for integration—ensuring every individual has the chance to thrive in a supportive community.
 .</p>
-                <a href="#" className={styles.partnerLink}>Learn More</a>
               </div>
             </div>
           </div>
